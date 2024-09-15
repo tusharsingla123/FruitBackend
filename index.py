@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all origins
 
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = '/tmp'
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
